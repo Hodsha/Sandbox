@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ThemeContext } from "../hooks/ThemeContext";
 import { Toggle } from '@fluentui/react/lib/Toggle';
@@ -14,6 +14,7 @@ import { motion } from 'framer-motion';
 import SocialIcons from "./SocialIcons";
 import About from "./About";
 import mypicture from './mustermann.jpg';
+import Introduction from "./Introduction";
 
 const skillsIcons = [
   { name: 'react', icon: <DiReact />, skill: '80%' },
@@ -28,6 +29,7 @@ const Home = () => {
   const { theme } = useContext(ThemeContext);
   const { darkMode } = theme;
   const { t } = useTranslation();
+  const [isHovered, setIsHovered] = useState(false);
   const [text] = useTypewriter({
     words: [
       "Hi, I'm Shayan Bondar",
@@ -48,51 +50,35 @@ const Home = () => {
     loop: true,
     delaySpeed: 2000,
   });
+
+  const [introduction] = useTypewriter({
+    words: [
+      "Junior Frontend Developer"
+    ],
+    loop: true,
+    delaySpeed: 2000,
+  });
+
+  const handleHover = () => {
+    setIsHovered(!isHovered);
+  };
+
   return (
-    <div className={`${darkMode ? 'bg-#18181b' : 'bg-white'}`}>
-      <div className={`${darkMode ? 'bg-#18181b' : 'bg-white'} ml-14`}>
-        <div className={`text-${darkMode ? 'white' : 'black'}`}>
+    <div className={`${darkMode ? 'bg-#18181b' : 'bg-white'} `}>
 
+      <div className={`text-${darkMode ? 'white' : 'black'}`}>
 
+        <Introduction />
+<div className="eins">
 
-          <div className="mb-5  pt-10 text-center">
-            <p className='text-4xl ml-5 inline-block'>Hello there!</p>
-            <div className="flex justify-center items-center">
-              <hr className="border-t border-gray-500 my-8 w-60" />
-            </div>
-            <p className="text-xl">{t('welcome')}</p>
-          </div>
+</div>
+        <About />
 
-          <div className="border border-collapse border-cyan-800 w-1/2 ml-auto mr-auto h-96">
-
-            <img src={mypicture} alt="Shayan" className="w-52 float-right pt-20 pr-10" />
-            
-
-            <div className="pt-10 pl-2">
-              <div className=" text-2xl">
-                <span>
-                  <div className="mr-96">&#123;</div>
-                  <div className="">{t('name')}: Shayan Bondar <br /></div>
-                  <div className=""> {t('birthday')}: 11.12.1994 <br /></div>
-                  <div className="">{t('age')}: 28 <br /></div>
-                  <div className="">{t('country')}: Germany <br /></div>
-                  <div className="">{t('city')}: Ansbach <br /></div>
-                  <div className="mr-96">&#125;</div>
-                </span>
-              </div>
-            </div>
-
-          </div>
-
-          <About />
-
-          <SocialIcons />
-
-        </div>
-
-        <br /><br />
+        <SocialIcons />
 
       </div>
+
+      <br /><br />
 
     </div>
   );

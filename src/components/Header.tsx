@@ -113,6 +113,7 @@ export default function Header() {
                 <BiMoviePlay className='float-left ml-2 mt-5 text-4xl' />
               </Link>
             </li>
+           
             <li>
               <button
                 className='ml-4 mt-3 '
@@ -146,6 +147,11 @@ export default function Header() {
             <li className='mt-4 pl-4'>
               <Link to="/Movie" className="text-white">
                 <BiMoviePlay className='float-left mr-3 text-2xl' /> Movie
+              </Link>
+            </li>
+            <li>
+              <Link to="/TimeLine" className='text-white'>
+                <div>TimeLine</div>
               </Link>
             </li>
             <li className='pl-4 mt-4'>
