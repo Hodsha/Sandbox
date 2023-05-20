@@ -3,9 +3,13 @@ import mypicture from './mustermann.jpg';
 import { t } from 'i18next';
 import './Introduction.scss';
 const Introduction = () => {
-    const [isHovered, setIsHovered] = useState(false);
-    const handleHover = () => {
-        setIsHovered(!isHovered);
+    const [isHoveredEN, setIsHoveredEN] = useState(false);
+    const [isHoveredDE, setIsHoveredDE] = useState(false);
+    const handleHoverEN = () => {
+        setIsHoveredEN(!isHoveredEN);
+      };
+      const handleHoverDE = () => {
+        setIsHoveredDE(!isHoveredDE);
       };
     return (
         <div className="component">
@@ -16,22 +20,30 @@ const Introduction = () => {
                 <div className="pt-10 pl-2">
                     <div className=" text-2xl">
                         <span>
-                            <div className="mr-96">&#123;</div>
-                            <div className="">{t('name')}: Shayan Bondar <br /></div>
-                            <div className=""> {t('birthday')}: 11.12.1994 <br /></div>
-                            <div className="">{t('age')}: 28 <br /></div>
-                            <div className="">{t('country')}: Germany <br /></div>
-                            <div className="">{t('city')}: Ansbach <br /></div>
-                            <div className="mr-96">&#125;</div>
+                            <div className="mr-96 ml-1">&#123;</div>
+                            <div className="ml-4">{t('name')}: Shayan Bondar <br /></div>
+                            <div className="ml-4"> {t('birthday')}: 11.12.1994 <br /></div>
+                            <div className="ml-4">{t('age')}: 28 <br /></div>
+                            <div className="ml-4">{t('country')}: Germany <br /></div>
+                            <div className="ml-4">{t('city')}: Ansbach <br /></div>
+                            <div className="mr-96 ml-1">&#125;</div>
                         </span>
                     </div>
                 </div>
                 <button
-                    className={`hover-button ${isHovered ? 'hovered' : ''}`}
-                    onMouseEnter={handleHover}
-                    onMouseLeave={handleHover}
+                    className={`hover-button ${isHoveredEN ? 'hovered' : ''}`}
+                    onMouseEnter={handleHoverEN}
+                    onMouseLeave={handleHoverEN}
                 >
-                    <span className="button-text">{isHovered ? 'download' : 'CV-English'}</span>
+                    <span className="button-text">{isHoveredEN ? 'download' : 'CV-En'}</span>
+                </button>
+
+                <button
+                    className={`hover-button ${isHoveredDE ? 'hovered' : ''} ml-2`}
+                    onMouseEnter={handleHoverDE}
+                    onMouseLeave={handleHoverDE}
+                >
+                    <span className="button-text">{isHoveredDE ? 'download' : 'CV-De'}</span>
                 </button>
             </div>
             <div className="image-container">

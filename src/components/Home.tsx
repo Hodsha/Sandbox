@@ -15,6 +15,8 @@ import SocialIcons from "./SocialIcons";
 import About from "./About";
 import mypicture from './mustermann.jpg';
 import Introduction from "./Introduction";
+import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from 'react-icons/bs';
+import SocialMedia from "./SocialMedia";
 
 const skillsIcons = [
   { name: 'react', icon: <DiReact />, skill: '80%' },
@@ -69,9 +71,12 @@ const Home = () => {
       <div className={`text-${darkMode ? 'white' : 'black'}`}>
 
         <Introduction />
-<div className="eins">
 
-</div>
+
+        <h1 className="text-center mt-14 mb-8">Social Media</h1><br />
+
+        <SocialMedia />
+        <br />
         <About />
 
         <SocialIcons />

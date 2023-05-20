@@ -14,19 +14,15 @@ const skillsIcons = [
 function SocialIcons() {
     return (
         <>    <div className="justify-center flex mt-10 mb-4"><h1 className="text-center float-none mt-10 text-4xl">Skills</h1></div>
-<br />
+            <br />
             <div className='justify-center flex'>
-
-
                 {skillsIcons.map((skill) => (
-
                     <div className='relative w-14 mobile:w-12 h-14 mobile:h-12 rounded-full   float-left ml-3 cursor-pointer overflow-hidden'>
                         {skill.icon}
                         <div className=' absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300 ease-in-out'>
                             <p className='text-black text-lg font-bold bg-white bg-opacity-50 p-4 rounded-full absolute inset-0 flex items-center justify-center'>{skill.skill}</p>
                         </div>
                     </div>
-
                 ))}
             </div>
         </>
