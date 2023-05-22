@@ -10,13 +10,13 @@
 .navbar-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: right;
 }
 
 .navbar-title {
   color: #fff;
   font-size: 24px;
-  text-align: center;
+  text-align: right;
 }
 
 .hamburger {
@@ -61,8 +61,7 @@
   list-style: none;
   display: flex;
   justify-content: flex-start;
-  margin-right: auto;
-  margin-left: auto;
+
 
   @media (max-width: 768px) {
     display: none;

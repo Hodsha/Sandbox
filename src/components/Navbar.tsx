@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
     };
 
     return (
-            <nav className="navbar">
+            <header className="navbar">
                 <div className="navbar-container">
                     <div className="navbar-title">Shayan Bondar</div>
                     <button className={`hamburger ${isMenuOpen ? 'open' : ''}`} onClick={handleMenuToggle}>
@@ -26,18 +26,17 @@ const Navbar: React.FC = () => {
                     <ul className={`navbar-menu ${isMenuOpen ? 'open' : ''}`}>
 
                             <Link to="/" className='navbar-item'>
-                                <AiFillHome className='float-left mr-1 text-2xl' /> Home
+                               Home
                             </Link>
                             <Link to="/Movie" className='navbar-item'>
-                                <BiMoviePlay className='float-left mr-1 text-2xl' /> Movie
+                                Movie
                             </Link>
                             <Link to="/TimeLine" className='navbar-item'>
-                                <MdUpdate className='float-left mr-1 text-2xl' /> Updates
+                                 Updates
                             </Link>
                     </ul>
                 </div>
-
-            </nav>
+            </header>
     );
 };
 

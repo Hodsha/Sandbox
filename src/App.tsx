@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Movie from './components/Movie';
 import TimeLine from './components/TimeLine';
 import Navbar from './components/Navbar';
+import Navbarz from './components/Navbarz';
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
   return (
     <ThemeProvider>
       <HashRouter>
-        <Navbar />
+        <Navbarz />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
