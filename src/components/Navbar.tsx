@@ -15,28 +15,28 @@ const Navbar: React.FC = () => {
     };
 
     return (
-            <header className="navbar">
-                <div className="navbar-container">
-                    <div className="navbar-title">Shayan Bondar</div>
-                    <button className={`hamburger ${isMenuOpen ? 'open' : ''}`} onClick={handleMenuToggle}>
-                        <span className="line"></span>
-                        <span className="line"></span>
-                        <span className="line"></span>
-                    </button>
-                    <ul className={`navbar-menu ${isMenuOpen ? 'open' : ''}`}>
+        <header className="navbar">
+            <div className="navbar-container">
+                <div className="navbar-title">Shayan Bondar</div>
+                <button className={`hamburger ${isMenuOpen ? 'open' : ''}`} onClick={handleMenuToggle}>
+                    <span className="line"></span>
+                    <span className="line"></span>
+                    <span className="line"></span>
+                </button>
+                <ul className={`navbar-menu ${isMenuOpen ? 'open' : ''}`}>
 
-                            <Link to="/" className='navbar-item'>
-                               Home
-                            </Link>
-                            <Link to="/Movie" className='navbar-item'>
-                                Movie
-                            </Link>
-                            <Link to="/TimeLine" className='navbar-item'>
-                                 Updates
-                            </Link>
-                    </ul>
-                </div>
-            </header>
+                    <Link to="/" className='navbar-item'>
+                        Home
+                    </Link>
+                    <Link to="/Movie" className='navbar-item'>
+                        Movie
+                    </Link>
+                    <Link to="/TimeLine" className='navbar-item'>
+                        Updates
+                    </Link>|
+                </ul>
+            </div>
+        </header>
     );
 };
 

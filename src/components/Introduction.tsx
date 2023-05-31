@@ -30,7 +30,7 @@ const Introduction = () => {
                         </span>
                     </div>
                 </div>
-                <button
+                {/* <button
                     className={`hover-button ${isHoveredEN ? 'hovered' : ''}`}
                     onMouseEnter={handleHoverEN}
                     onMouseLeave={handleHoverEN}
@@ -44,7 +44,7 @@ const Introduction = () => {
                     onMouseLeave={handleHoverDE}
                 >
                     <span className="button-text">{isHoveredDE ? 'download' : 'CV-De'}</span>
-                </button>
+                </button> */}
             </div>
             <div className="image-container">
                 <img src={mypicture} alt="Bild" className="pictureHomePage" />

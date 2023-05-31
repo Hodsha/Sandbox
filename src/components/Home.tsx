@@ -11,7 +11,7 @@ import { SiTypescript, SiMicrosoftsharepoint, SiCsharp } from 'react-icons/si';
 import { TbApi } from 'react-icons/tb';
 import './Home.scss';
 import { motion } from 'framer-motion';
-import SocialIcons from "./SocialIcons";
+import DevSkills from "./DevSkills";
 import About from "./About";
 import mypicture from './mustermann.jpg';
 import Introduction from "./Introduction";
@@ -66,22 +66,22 @@ const Home = () => {
   };
 
   return (
-    <div className={`${darkMode ? 'bg-#18181b' : 'bg-white'} `}>
-
-      <div className={`text-${darkMode ? 'white' : 'black'}`}>
-
-        <Introduction />
+    <div className={`${darkMode ? 'bg-#18181b' : 'bg-white'} text-${darkMode ? 'white' : 'black'}`}>
 
 
-        <h1 className="text-center mt-14 mb-8">Social Media</h1><br />
 
-        <SocialMedia />
-        <br />
-        <About />
+      <Introduction />
 
-        <SocialIcons />
 
-      </div>
+      <h1 className="text-center mt-14 mb-8">------Social Media------</h1><br />
+
+      <SocialMedia />
+      <br />
+      {/* <About /> */}
+
+      <DevSkills />
+
+
 
       <br /><br />
 

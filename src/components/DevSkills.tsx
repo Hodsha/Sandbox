@@ -11,7 +11,7 @@ const skillsIcons = [
     { name: 'csharp', icon: <TbBrandCSharp className='absolute inset-0 w-full h-full object-cover' color='#FFDFD991' />, skill: '50%' },
     { name: 'sharepoint', icon: <SiMicrosoftsharepoint className='absolute inset-0 w-full h-full object-cover' color='#038186' />, skill: '75%' },
 ]
-function SocialIcons() {
+function DevSkills() {
     return (
         <>    <div className="justify-center flex mt-10 mb-4"><h1 className="text-center float-none mt-10 text-4xl">Skills</h1></div>
             <br />
@@ -29,4 +29,4 @@ function SocialIcons() {
     );
 }
 
-export default SocialIcons;
+export default DevSkills;

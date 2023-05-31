@@ -11,6 +11,7 @@ import './Header.scss';
 import { useTypewriter } from 'react-simple-typewriter';
 import i18n from './i18n';
 import { Toggle } from '@fluentui/react';
+import { MdUpdate } from 'react-icons/md';
 
 
 
@@ -99,7 +100,55 @@ export default function Header() {
   return (
 
     <div ref={navbarRef}>
-      {!isOpen && (
+      <a onClick={handleOpen}><RxHamburgerMenu className='text-2xl cursor-pointer text-white ml-5 pt-1' /></a>
+      <div className={`${isOpen ? 'is-active' : ''}`} >
+        <div className='sidenav z-10'>
+          <a onClick={handleClose}> <AiOutlineClose className=' text-white float-right mr-2 mt-2 cursor-pointer' /></a>
+          <img src={mypicture} className='rounded-full' />
+          <p className='text-white ml-5 text-sm inline-block'>{text}</p>
+          <div className='text-3xl mt-5 text-white'>
+            <BsGithub className=' float-left ml-3' />
+            <BsInstagram className=' float-left ml-4' />
+            <BsTwitter className=' float-left ml-4 mr-4' />
+            <BsLinkedin />
+          </div>
+          <p className='text-white text-xs text-center mt-2'>shayanbondar94@gmail.com</p>
+          <ul className=' mt-10'>
+            <li className='mt-4 pl-4'>
+              <Link to="/" className=" text-white">
+                <AiFillHome className='float-left mr-3 text-2xl' /> Home
+              </Link>
+            </li>
+            <li className='mt-4 pl-4'>
+              <Link to="/Movie" className="text-white">
+                <BiMoviePlay className='float-left mr-3 text-2xl' /> Movie
+              </Link>
+            </li>
+            <li className='mt-4 pl-4'>
+              <Link to="/TimeLine" className='text-white'>
+                <MdUpdate className='float-left mr-3 text-2xl' /> Timeline
+              </Link>
+            </li>
+            <li className='pl-4 mt-4'>
+              <button className={`text-${theme.darkMode ? 'light' : 'dark'} mr-3`} onClick={handleToggleDarkMode}>
+                {theme.darkMode ? <FaSun className='text-yellow-300' size={30} /> : <FaMoon className='text-white' size={30} />}
+              </button>
+            </li>
+            <li className='pl-4 mt-3'>
+              <button onClick={toggleLanguage}>
+                {isChecked ? <img src="https://flagcdn.com/28x21/de.png" width="28" height="21" alt="Germany" /> : <img src="https://flagcdn.com/28x21/gb.png" width="28" height="21" alt="United Kingdom" />}
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div >
+
+  )
+}
+
+
+ {/* {!isOpen && (
         <div className='bg-black w-14 h-full fixed z-10'>
           <a onClick={handleOpen}><RxHamburgerMenu className='text-2xl cursor-pointer text-white ml-4 mt-3' /></a>
           <ul className='mt-5'>
@@ -124,56 +173,4 @@ export default function Header() {
             </li>
           </ul>
         </div>
-      )}
-
-      <div className={`${isOpen ? 'is-active' : ''}`} >
-        <div className='sidenav z-10'>
-          <a onClick={handleClose}> <AiOutlineClose className=' text-white float-right mr-2 mt-2 cursor-pointer' /></a>
-          <img src={mypicture} className='rounded-full' />
-          <p className='text-white ml-5 text-sm inline-block'>{text}</p>
-          <div className='text-3xl mt-5 text-white'>
-            <BsGithub className=' float-left ml-3' />
-            <BsInstagram className=' float-left ml-4' />
-            <BsTwitter className=' float-left ml-4 mr-4' />
-            <BsLinkedin />
-          </div>
-          <p className='text-white text-xs text-center mt-2'>shayanbondar94@gmail.com</p>
-          <ul className=' mt-10'>
-            <li className='mt-4 pl-4'>
-              <Link to="/" className=" text-white">
-                <AiFillHome className='float-left mr-3 text-2xl' /> Home
-              </Link>
-            </li>
-            <li className='mt-4 pl-4'>
-              <Link to="/Movie" className="text-white">
-                <BiMoviePlay className='float-left mr-3 text-2xl' /> Movie
-              </Link>
-            </li>
-            <li>
-              <Link to="/TimeLine" className='text-white'>
-                <div>TimeLine</div>
-              </Link>
-            </li>
-            <li className='pl-4 mt-4'>
-              <button
-                className="text-white   "
-                onClick={handleToggleDarkMode}
-              >
-                {theme.darkMode ?   <span className=' float-left'><FaSun className=' float-left mt-1 text-2xl'/> <p className='float-left ml-3'>Lightmode</p>  </span>  : <span className=' float-left'> <FaMoon className='float-left mt-1 text-2xl'/> <p className='float-left ml-3'>Darkmode</p></span>}
-              </button>
-            </li>
-            <li className='pl-4 mt-3'>
-               <p><Toggle checked={isChecked}  onChange={toggleLanguage}  className='float-left mt-2 bg-red-500 rounded-xl'/> <span className='text-white ml-2'>{language}</span> </p>
-            </li>
-        
-          </ul>
-        </div>
-      </div>
-
-
-
-
-    </div >
-
-  )
-}
+      )} */}

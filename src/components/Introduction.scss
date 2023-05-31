@@ -1,69 +1,69 @@
-  .component {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding-top: 5rem;
-  
-    @media (min-width: 768px) {
-      flex-direction: row;
-    }
+.component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 5rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
   }
-  
-  .text-container {
+}
+
+.text-container {
+  text-align: center;
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    text-align: left;
+    margin-bottom: 0;
+    margin-right: 150px;
+  }
+}
+
+.image-container {
+  margin-bottom: 20px;
+
+  img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 50%;
+  }
+}
+@media (max-width: 768px) {
+
+  .image-container{
+    margin-left: 4n0px;
+    margin-right: auto;
+  }
+}
+
+.hover-button {
+  width: 120px;
+  height: 45px;
+  border-radius: 5%;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #000428;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+
+  &.hovered {
+    background-color: #7a0b0b;
+    color: #fafafa;
+  }
+
+  .button-text {
+    display: inline-block;
+    width: 100%;
     text-align: center;
-    margin-bottom: 20px;
-  
-    @media (min-width: 768px) {
-      text-align: left;
-      margin-bottom: 0;
-      margin-right: 150px;
-    }
   }
-  
-  .image-container {
-    margin-bottom: 20px;
-  
-    img {
-      max-width: 90%;
-      height: auto;
-      border-radius: 50%;
-    }
-  
-    @media (min-width: 768px) {
-      margin-bottom: 0;
-    }
-  }
-  
-  .hover-button {
-    width: 120px;
-    height: 45px;
-    border-radius: 5%;
-    margin-top: 1rem;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #000428;
-    color: #fff;
-    transition: background-color 0.3s, color 0.3s;
-  
-    &.hovered {
-      background-color: #7a0b0b;
-      color: #fafafa;
-    }
-  
+
+  @media (max-width: 768px) {
     .button-text {
-      display: inline-block;
-      width: 100%;
-      text-align: center;
-    }
-  
-    @media (max-width: 768px) {
-      .button-text {
-        font-size: 14px;
-      }
+      font-size: 14px;
     }
   }
-  
-  
-  
+}

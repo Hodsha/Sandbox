@@ -3,11 +3,12 @@ import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
 import Home from "./components/Home";
 import About from "./components/About";
 import { ThemeProvider } from './hooks/ThemeContext';
-import Header from './components/Header';
+import Header from './components/NavbarX';
 import Movie from './components/Movie';
 import TimeLine from './components/TimeLine';
 import Navbar from './components/Navbar';
 import Navbarz from './components/Navbarz';
+import Sidebar from './components/Sidebar';
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
   return (
     <ThemeProvider>
       <HashRouter>
-        <Navbarz />
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
