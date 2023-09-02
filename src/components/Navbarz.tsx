@@ -42,6 +42,7 @@ const Navbarz = () => {
   const handleToggleDarkMode = () => {
     theme.toggleDarkMode();
   };
+  
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };

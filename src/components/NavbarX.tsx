@@ -7,7 +7,7 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { BsInstagram, BsTwitter, BsLinkedin, BsGithub } from 'react-icons/bs';
 import mypicture from './mustermann.jpg';
-import './Header.scss';
+import './NavbarX.scss';
 import { useTypewriter } from 'react-simple-typewriter';
 import i18n from './i18n';
 import { Toggle } from '@fluentui/react';
@@ -29,7 +29,7 @@ function useWindowSize() {
   return size;
 }
 
-export default function Header() {
+export default function NavbarX() {
   const [isChecked, setIsChecked] = useState<boolean>(false);
   const [language, setLanguage] = useState<string>("English");
   const { theme } = useContext(ThemeContext);
